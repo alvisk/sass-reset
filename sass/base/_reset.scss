@@ -1,0 +1,119 @@
+@use "../abstracts/mixins";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// $type-scale: (
+//   small: (
+//     // Minor third
+//     400: 0.813rem,
+//     600: 0.875rem,
+//     700: 1.5rem,
+//   ),
+//   medium: (
+//     // Augmented fourth
+//     400: 0.875rem,
+//     600: 1.5rem,
+//     700: 2.25rem,
+//   ),
+
+html {
+  font-family: "avenir", sans-serif;
+  font-size: 16px;
+}
+
+html,
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  // Help prevent overflow of long words/names/URLs
+  overflow-wrap: break-word;
+
+  // Optional, not supported for all languages
+  hyphens: auto;
+}
+
+// main {
+//   padding: 0 16px;
+// }
+
+body {
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+//Footer Styling
+address {
+  font-style: normal;
+  padding-bottom: 16px;
+}
+h1 {
+  font-weight: 700;
+  // font-size: 60px;
+  font-size: 24px;
+}
+h2 {
+  font-weight: 600;
+
+  // font-size: 36px;
+  font-size: 24px;
+}
+h3,
+q {
+  // font-size: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  width: 100%;
+}
+p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+body {
+  @include mixins.mq(medium) {
+    h1 {
+      font-size: 3.75rem;
+      line-height: 68px;
+    }
+    h2 {
+      font-size: 2.25rem;
+      line-height: 44px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 32px;
+    }
+    q {
+      font-size: 1.5rem;
+      line-height: 32px;
+    }
+    p {
+      font-size: 0.875rem;
+      line-height: 22px;
+    }
+  }
+}

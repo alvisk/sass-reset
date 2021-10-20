@@ -1,0 +1,26 @@
+$band-site-black: #323232;
+$silver: #afafaf;
+$mercury: #e1e1e1;
+$Alabaster: #fafafa;
+$footer-subtitle: #db7a4e;
+
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1280px,
+);
+
+$type-scale: (
+  small: (
+    // Minor third
+    400: 0.813rem,
+    600: 0.875rem,
+    700: 1.5rem,
+  ),
+  big: (
+    // Augmented fourth
+    400: 0.875rem,
+    600: 1.5rem,
+    700: 2.25rem,
+  ),
+);

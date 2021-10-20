@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+.button {
+  font-size: 18px;
+  width: fit-content;
+  background-color: $footer-subtitle;
+  border: none;
+  color: #ffffff;
+  width: 150px;
+  border-radius: 25px;
+  height: 40px;
+  margin-top: 2rem;
+}

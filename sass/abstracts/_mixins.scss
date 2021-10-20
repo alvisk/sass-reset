@@ -1,0 +1,110 @@
+@use "./variables";
+
+@mixin mq($key) {
+  $size: map-get(variables.$breakpoints, $key);
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin font() {
+}
+
+@mixin background-image($name) {
+  background-image: url("/assets/images/#{$name}.jpg");
+  margin: auto 0;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 650px;
+}
+
+@mixin flex {
+  display: flex;
+  height: 350px;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  max-width: 250px;
+  min-width: 250px;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+// @for $i from 1 through 5 {
+//   .tile-#{$i} {
+//     @include tile-height($i);
+//   }
+// }
+
+@mixin transition($transition-type, $transition-length) {
+  &::after {
+    margin-top: 16px;
+    width: 0;
+    content: "";
+
+    background-color: #fff;
+
+    display: block;
+    transition: $transition-type $transition-length;
+  }
+  &:hover::after {
+    width: 100%;
+    height: 4px;
+  }
+}
+
+@mixin pad(
+  $small-left: 16px,
+  $small-right: 16px,
+  $medium-left: 32px,
+  $medium-right: 32px,
+  $large-left: 64px,
+  $large-right: 64px
+) {
+  padding: {
+    left: $small-left;
+
+    right: $small-right;
+  }
+  @include mq(medium) {
+    padding: {
+      left: $medium-left;
+      right: $medium-right;
+    }
+    @include mq(large) {
+      padding: {
+        left: $large-left;
+        right: $large-right;
+      }
+    }
+  }
+}
+
+@mixin pad-top-bottom(
+  $small-left: 24px,
+  $small-right: 16px,
+  $medium-left: 48px,
+  $medium-right: 32px,
+  $large-left: 96px,
+  $large-right: 64px
+) {
+  padding: {
+    top: $small-left;
+
+    bottom: $small-right;
+  }
+  @include mq(medium) {
+    padding: {
+      top: $medium-left;
+      bottom: $medium-right;
+    }
+    @include mq(large) {
+      padding: {
+        top: $large-left;
+        bottom: $large-right;
+      }
+    }
+  }
+}

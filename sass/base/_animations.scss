@@ -1,0 +1,15 @@
+.reset:hover {
+  transform: scale(1.05);
+  transition: ease 0.5s;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.reset:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  padding: 7px 10px;
+  transform: scale(1.1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  transition: ease 350ms;
+  cursor: pointer;
+}

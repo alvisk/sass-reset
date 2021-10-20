@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "avenir";
+  font-weight: 400;
+  src: url(/assets/font/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+  font-family: "avenir";
+  font-weight: 600;
+  src: url(/assets/font/AvenirNextLTPro-Demi.otf);
+}
+
+@font-face {
+  font-family: "avenir";
+  font-weight: 700;
+  src: url(/assets/font/AvenirNextLTPro-Bold.otf);
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
